@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta name="description" content="APEX Marketing Digital — Agência premium de marketing digital em Capão da Canoa, RS. Gestão de redes sociais, design gráfico, tráfego pago e identidade visual.">
+<meta property="og:title" content="APEX Marketing Digital">
+<meta property="og:description" content="Sua marca no topo. Seus resultados no próximo nível.">
+<meta property="og:type" content="website">
+<title>APEX Marketing Digital — Capão da Canoa, RS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+/* ── DESIGN TOKENS ─────────────────────────────── */
+:root {
+  --gold:       #C9A84C;
+  --gold-light: #E8C96A;
+  --gold-dark:  #9A7A2E;
+  --black:      #0A0A0A;
+  --off-black:  #141414;
+  --charcoal:   #1C1C1C;
+  --dark-gray:  #2A2A2A;
+  --mid-gray:   #555;
+  --light-gray: #AAA;
+  --white:      #F5F3EE;
+  --radius:     4px;
+  --max:        1140px;
+  --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── RESET ─────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; outline: none; background: none; }
+ul { list-style: none; }
+
+/* ── UTILITY ───────────────────────────────────── */
+.container { max-width: var(--max); margin: 0 auto; padding: 0 1.5rem; }
+.gold { color: var(--gold); }
+.tag {
+  display: inline-block;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 5px 16px; border-radius: var(--radius);
+  margin-bottom: 1.25rem;
+}
+.section-label {
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 0.4rem;
+}
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800; line-height: 1.15;
+  color: var(--white); margin-bottom: 1rem;
+}
+.section-sub {
+  font-size: 15px; color: var(--light-gray);
+  max-width: 520px; line-height: 1.7;
+}
+.divider {
+  display: flex; align-items: center; gap: 1rem; margin: 4rem 0;
+}
+.divider::before, .divider::after {
+  content: ''; flex: 1; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.25), transparent);
+}
+.divider span {
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold); white-space: nowrap;
+}
+
+/* ── BUTTONS ───────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.5px;
+  padding: 13px 28px; border-radius: var(--radius);
+  transition: var(--transition);
+}
+.btn-primary {
+  background: linear-gradient(135deg, #E8C96A, #C9A84C);
+  color: var(--black); border: none;
+}
+.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); box-shadow: 0 8px 28px rgba(201,168,76,0.25); }
+.btn-outline {
+  background: transparent; color: var(--white);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.btn-whatsapp {
+  background: #25D366; color: #fff; border: none;
+}
+.btn-whatsapp:hover { background: #1fba59; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
+
+/* ── NAVBAR ────────────────────────────────────── */
+#navbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom: 1px solid rgba(201,168,76,0.1);
+  transition: var(--transition);
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 10px;
+  font-family: 'Syne', sans-serif;
+  font-size: 20px; font-weight: 800;
+  background: linear-gradient(135deg, #E8C96A, #C9A84C);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.nav-logo svg { flex-shrink: 0; }
+.nav-links {
+  display: flex; align-items: center; gap: 2rem;
+}
+.nav-links a {
+  font-size: 13px; font-weight: 500; letter-spacing: 0.3px;
+  color: var(--light-gray); transition: color var(--transition);
+}
+.nav-links a:hover { color: var(--white); }
+.nav-cta { margin-left: 0.5rem; }
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  padding: 4px; cursor: pointer;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px;
+  background: var(--white); border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* Mobile nav */
+#mobile-nav {
+  display: none; position: fixed;
+  top: 68px; left: 0; right: 0; bottom: 0;
+  background: rgba(10,10,10,0.97);
+  backdrop-filter: blur(20px);
+  z-index: 999; flex-direction: column;
+  padding: 2rem 1.5rem; gap: 0.5rem;
+}
+#mobile-nav.open { display: flex; }
+#mobile-nav a {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px; font-weight: 700;
+  color: var(--white); padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color var(--transition);
+}
+#mobile-nav a:hover { color: var(--gold); }
+#mobile-nav .btn { margin-top: 1.5rem; width: 100%; justify-content: center; }
+
+/* ── HERO ──────────────────────────────────────── */
+#hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding-top: 68px; position: relative; overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0; pointer-events: none;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: -20%; left: 50%; transform: translateX(-50%);
+  width: 900px; height: 700px;
+  background: radial-gradient(ellipse at 50% 30%, rgba(201,168,76,0.07) 0%, transparent 65%);
+}
+.hero-grid-lines {
+  position: absolute; inset: 0; opacity: 0.03;
+  background-image:
+    linear-gradient(rgba(201,168,76,1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,168,76,1) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-content {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: center;
+  padding: 5rem 0;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 500; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+.hero-eyebrow::before {
+  content: ''; width: 24px; height: 1px; background: var(--gold);
+}
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(38px, 5.5vw, 68px);
+  font-weight: 800; line-height: 1.08;
+  letter-spacing: -1px; margin-bottom: 1.5rem;
+}
+.hero-title .accent {
+  background: linear-gradient(135deg, #E8C96A 0%, #C9A84C 60%, #9A7A2E 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-desc {
+  font-size: 16px; color: var(--light-gray);
+  line-height: 1.75; margin-bottom: 2.5rem; max-width: 460px;
+}
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero-stats {
+  display: flex; gap: 2rem; margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+}
+.stat-item {}
+.stat-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px; font-weight: 800;
+  color: var(--gold-light); line-height: 1;
+}
+.stat-label { font-size: 12px; color: var(--mid-gray); letter-spacing: 0.5px; margin-top: 4px; }
+.hero-visual {
+  position: relative; display: flex;
+  align-items: center; justify-content: center;
+}
+.hero-card-stack {
+  position: relative; width: 340px; height: 420px;
+}
+.h-card {
+  position: absolute;
+  background: var(--charcoal);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 12px; padding: 1.5rem;
+  transition: var(--transition);
+}
+.h-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); }
+.h-card-1 {
+  width: 280px; top: 0; left: 30px;
+  background: linear-gradient(135deg, #1C1A14, #1C1C1C);
+  border-color: rgba(201,168,76,0.35);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.h-card-2 {
+  width: 240px; bottom: 30px; right: 0;
+  background: var(--off-black);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+.h-card-3 {
+  width: 160px; bottom: 100px; left: 0;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
+.card-metric-label {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold-dark); margin-bottom: 0.75rem;
+}
+.card-metric-big {
+  font-family: 'Syne', sans-serif;
+  font-size: 36px; font-weight: 800;
+  background: linear-gradient(135deg, #E8C96A, #C9A84C);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.card-metric-sub {
+  font-size: 12px; color: var(--mid-gray); margin-top: 4px;
+}
+.sparkbar {
+  display: flex; align-items: flex-end; gap: 4px;
+  height: 40px; margin-top: 1rem;
+}
+.sparkbar span {
+  flex: 1; background: rgba(201,168,76,0.15);
+  border-radius: 2px; min-width: 8px;
+}
+.sparkbar span.active { background: var(--gold); }
+
+/* ── SERVICES ──────────────────────────────────── */
+#servicos { padding: 6rem 0; }
+.services-header {
+  display: flex; justify-content: space-between;
+  align-items: flex-end; margin-bottom: 3rem; gap: 2rem;
+  flex-wrap: wrap;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px; background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 8px; overflow: hidden;
+}
+.service-card {
+  background: var(--off-black); padding: 2rem 1.75rem;
+  transition: var(--transition); position: relative; overflow: hidden;
+  cursor: default;
+}
+.service-card::before {
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0; transition: var(--transition);
+}
+.service-card:hover { background: #181610; }
+.service-card:hover::before { opacity: 1; }
+.service-icon-wrap {
+  width: 44px; height: 44px; border-radius: var(--radius);
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.15);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; margin-bottom: 1.25rem;
+}
+.service-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px; font-weight: 700;
+  color: var(--white); margin-bottom: 0.6rem;
+}
+.service-desc { font-size: 13px; color: var(--mid-gray); line-height: 1.6; }
+
+/* ── PROCESS ───────────────────────────────────── */
+#processo { padding: 6rem 0; background: var(--off-black); }
+.process-steps {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0; position: relative;
+  margin-top: 3rem;
+}
+.process-step {
+  padding: 2rem; position: relative;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+.process-step:last-child { border-right: none; }
+.step-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 56px; font-weight: 800;
+  color: rgba(201,168,76,0.07); line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.step-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px; font-weight: 700;
+  color: var(--white); margin-bottom: 0.6rem;
+}
+.step-desc { font-size: 13px; color: var(--mid-gray); line-height: 1.6; }
+.step-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gold); margin-bottom: 1rem;
+}
+
+/* ── PRICING ───────────────────────────────────── */
+#precos { padding: 6rem 0; }
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem; margin-top: 3rem;
+}
+.pricing-card {
+  background: var(--charcoal);
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 8px; padding: 2rem;
+  position: relative; overflow: hidden;
+  transition: var(--transition);
+}
+.pricing-card::after {
+  content: ''; position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+}
+.pricing-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+.pricing-card.featured {
+  border-color: rgba(201,168,76,0.5);
+  background: linear-gradient(135deg, #1E1B10, #1C1C1C);
+}
+.pricing-card.featured::after {
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.pricing-badge {
+  font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold-dark); background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.15);
+  padding: 4px 10px; border-radius: var(--radius);
+  display: inline-block; margin-bottom: 1rem;
+}
+.pricing-name {
+  font-family: 'Syne', sans-serif;
+  font-size: 24px; font-weight: 800;
+  color: var(--white); margin-bottom: 0.25rem;
+}
+.pricing-card.featured .pricing-name {
+  background: linear-gradient(135deg, #E8C96A, #C9A84C);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.pricing-sub { font-size: 13px; color: var(--gold); margin-bottom: 1.5rem; font-weight: 500; }
+.pricing-list { margin-bottom: 2rem; }
+.pricing-list li {
+  font-size: 13px; color: #BBB;
+  padding: 7px 0 7px 20px; position: relative;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.pricing-list li:last-child { border-bottom: none; }
+.pricing-list li::before {
+  content: '✓'; position: absolute; left: 0;
+  color: var(--gold); font-size: 12px; top: 7px;
+}
+.pricing-cta { width: 100%; justify-content: center; padding: 14px; font-size: 14px; }
+
+/* ── RESULTS / COUNTER ─────────────────────────── */
+#resultados { padding: 6rem 0; background: var(--off-black); }
+.results-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px; background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.1);
+  border-radius: 8px; overflow: hidden; margin-top: 3rem;
+}
+.result-item {
+  padding: 2.5rem 2rem; background: var(--off-black); text-align: center;
+  transition: var(--transition);
+}
+.result-item:hover { background: #181610; }
+.result-num {
+  font-family: 'Syne', sans-serif;
+  font-size: 44px; font-weight: 800;
+  background: linear-gradient(135deg, #E8C96A, #C9A84C);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; line-height: 1;
+}
+.result-label { font-size: 13px; color: var(--mid-gray); margin-top: 0.5rem; }
+
+/* ── TESTIMONIALS ──────────────────────────────── */
+#depoimentos { padding: 6rem 0; }
+.testimonials-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem; margin-top: 3rem;
+}
+.testimonial {
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px; padding: 1.75rem;
+  position: relative; transition: var(--transition);
+}
+.testimonial:hover { border-color: rgba(201,168,76,0.2); }
+.testimonial-quote {
+  font-size: 32px; line-height: 1;
+  color: rgba(201,168,76,0.2); margin-bottom: 0.75rem;
+  font-family: 'Syne', sans-serif;
+}
+.testimonial-text {
+  font-size: 14px; color: #CCC; line-height: 1.7;
+  margin-bottom: 1.25rem; font-style: italic;
+}
+.testimonial-author { display: flex; align-items: center; gap: 10px; }
+.author-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-weight: 700;
+  font-size: 14px; color: var(--gold); flex-shrink: 0;
+}
+.author-name { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 600; color: var(--white); }
+.author-role { font-size: 12px; color: var(--mid-gray); }
+.stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; margin-bottom: 0.75rem; }
+
+/* ── CONTACT ───────────────────────────────────── */
+#contato { padding: 6rem 0; background: var(--off-black); }
+.contact-wrapper {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 4rem; align-items: start;
+}
+.contact-info-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 32px; font-weight: 800;
+  color: var(--white); line-height: 1.2; margin-bottom: 1rem;
+}
+.contact-info-desc { font-size: 15px; color: var(--light-gray); line-height: 1.7; margin-bottom: 2rem; }
+.contact-channels { display: flex; flex-direction: column; gap: 1rem; }
+.contact-channel {
+  display: flex; align-items: center; gap: 14px;
+  padding: 1.1rem 1.25rem;
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  transition: var(--transition); text-decoration: none;
+}
+.contact-channel:hover { border-color: rgba(201,168,76,0.3); transform: translateX(4px); }
+.ch-icon {
+  width: 40px; height: 40px; border-radius: var(--radius);
+  background: rgba(201,168,76,0.08);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; flex-shrink: 0;
+}
+.ch-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--mid-gray); }
+.ch-value { font-size: 14px; font-weight: 500; color: var(--white); margin-top: 2px; }
+
+/* ── FORM ──────────────────────────────────────── */
+.contact-form { display: flex; flex-direction: column; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+label {
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--mid-gray);
+}
+input, textarea, select {
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  color: var(--white); font-family: 'DM Sans', sans-serif;
+  font-size: 14px; padding: 12px 16px;
+  width: 100%; transition: border-color var(--transition);
+  appearance: none; -webkit-appearance: none;
+}
+input::placeholder, textarea::placeholder { color: var(--mid-gray); }
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: rgba(201,168,76,0.5);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.07);
+}
+textarea { resize: vertical; min-height: 120px; }
+.form-feedback {
+  padding: 12px 16px; border-radius: var(--radius);
+  font-size: 14px; display: none;
+}
+.form-feedback.success { background: rgba(37,211,102,0.1); border: 1px solid rgba(37,211,102,0.2); color: #25D366; }
+.form-feedback.error { background: rgba(255,80,80,0.1); border: 1px solid rgba(255,80,80,0.2); color: #ff5050; }
+.form-submit { width: 100%; justify-content: center; padding: 14px; font-size: 15px; }
+.honeypot { display: none !important; visibility: hidden; }
+
+/* ── FOOTER ────────────────────────────────────── */
+footer {
+  background: var(--black);
+  border-top: 1px solid rgba(201,168,76,0.1);
+  padding: 3rem 0 1.5rem;
+}
+.footer-top {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem; margin-bottom: 2.5rem;
+}
+.footer-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px; font-weight: 800;
+  background: linear-gradient(135deg, #E8C96A, #C9A84C);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; margin-bottom: 0.75rem;
+}
+.footer-desc { font-size: 13px; color: var(--mid-gray); line-height: 1.7; max-width: 260px; }
+.footer-col-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px; font-weight: 700;
+  color: var(--white); letter-spacing: 1px;
+  text-transform: uppercase; margin-bottom: 1rem;
+}
+.footer-links { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-links a {
+  font-size: 13px; color: var(--mid-gray);
+  transition: color var(--transition);
+}
+.footer-links a:hover { color: var(--gold); }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-copy { font-size: 12px; color: var(--mid-gray); }
+.social-links { display: flex; gap: 0.75rem; }
+.social-link {
+  width: 36px; height: 36px; border-radius: var(--radius);
+  background: var(--charcoal);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; transition: var(--transition);
+}
+.social-link:hover { border-color: rgba(201,168,76,0.3); background: rgba(201,168,76,0.08); }
+
+/* ── FLOATING WA BUTTON ────────────────────────── */
+#float-wa {
+  position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 900;
+  display: flex; align-items: center; gap: 10px;
+  background: #25D366; color: #fff;
+  padding: 12px 20px; border-radius: 50px;
+  font-size: 13px; font-weight: 600;
+  box-shadow: 0 8px 32px rgba(37,211,102,0.4);
+  transition: var(--transition); text-decoration: none;
+}
+#float-wa:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(37,211,102,0.5); }
+#float-wa svg { flex-shrink: 0; }
+
+/* ── ANIMATIONS ────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,168,76,0.25); }
+  50%       { box-shadow: 0 0 0 12px rgba(201,168,76,0); }
+}
+.anim { opacity: 0; }
+.anim.visible { animation: fadeUp 0.6s ease forwards; }
+
+/* stagger */
+.anim:nth-child(1) { animation-delay: 0s; }
+.anim:nth-child(2) { animation-delay: 0.1s; }
+.anim:nth-child(3) { animation-delay: 0.2s; }
+.anim:nth-child(4) { animation-delay: 0.3s; }
+.anim:nth-child(5) { animation-delay: 0.4s; }
+.anim:nth-child(6) { animation-delay: 0.5s; }
+
+/* ── RESPONSIVE ────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-content { grid-template-columns: 1fr; gap: 2.5rem; text-align: center; }
+  .hero-desc { max-width: 100%; }
+  .hero-actions { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .hero-visual { display: none; }
+  .contact-wrapper { grid-template-columns: 1fr; gap: 2.5rem; }
+  .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-cta { display: none; }
+  .services-header { flex-direction: column; align-items: flex-start; }
+  .process-step { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .process-step:last-child { border-bottom: none; }
+}
+@media (max-width: 480px) {
+  #float-wa span { display: none; }
+  #float-wa { padding: 14px; border-radius: 50%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAVBAR ──────────────────────────────────── -->
+<nav id="navbar" role="navigation" aria-label="Navegação principal">
+  <div class="container nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="APEX Marketing Digital">
+      <svg width="28" height="28" viewBox="0 0 72 72" fill="none">
+        <polygon points="36,8 64,24 64,48 36,64 8,48 8,24" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+        <polygon points="36,18 54,28 54,44 36,54 18,44 18,28" fill="rgba(201,168,76,0.08)" stroke="#C9A84C" stroke-width="0.8" stroke-dasharray="3,2"/>
+        <text x="36" y="41" text-anchor="middle" font-family="Syne,sans-serif" font-size="18" font-weight="800" fill="#C9A84C">A</text>
+      </svg>
+      APEX
+    </a>
+    <div class="nav-links">
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Como Funciona</a>
+      <a href="#precos">Planos</a>
+      <a href="#depoimentos">Resultados</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <a href="https://wa.me/5551993463615?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20APEX." class="btn btn-whatsapp nav-cta" target="_blank" rel="noopener noreferrer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Falar no WhatsApp
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu móvel">
+  <a href="#servicos" onclick="closeMobileNav()">Serviços</a>
+  <a href="#processo" onclick="closeMobileNav()">Como Funciona</a>
+  <a href="#precos" onclick="closeMobileNav()">Planos</a>
+  <a href="#depoimentos" onclick="closeMobileNav()">Resultados</a>
+  <a href="#contato" onclick="closeMobileNav()">Contato</a>
+  <a href="https://wa.me/5551993463615?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20APEX." class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer" onclick="closeMobileNav()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Falar no WhatsApp
+  </a>
+</div>
+
+<!-- ── HERO ─────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid-lines"></div>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <div class="hero-eyebrow">Capão da Canoa · RS · Marketing Digital</div>
+        <h1 class="hero-title">
+          Sua marca no<br>
+          <span class="accent">topo.</span><br>
+          Seus resultados no<br>
+          <span class="accent">próximo nível.</span>
+        </h1>
+        <p class="hero-desc">
+          Transformamos negócios locais em referências digitais. Design estratégico, gestão de redes sociais e campanhas que realmente vendem.
+        </p>
+        <div class="hero-actions">
+          <a href="https://wa.me/5551993463615?text=Olá!%20Quero%20uma%20análise%20gratuita%20do%20meu%20negócio!" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Análise Gratuita
+          </a>
+          <a href="#servicos" class="btn btn-outline">Ver Serviços</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num" data-target="50">0</div>
+            <div class="stat-label">Clientes Atendidos</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="98" data-suffix="%">0%</div>
+            <div class="stat-label">Satisfação</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-target="3" data-suffix="x">0x</div>
+            <div class="stat-label">+ Alcance Médio</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-stack">
+          <div class="h-card h-card-1">
+            <div class="card-metric-label">Crescimento Mensal</div>
+            <div class="card-metric-big">+247%</div>
+            <div class="card-metric-sub">Alcance orgânico — Restaurante Local</div>
+            <div class="sparkbar">
+              <span style="height:30%"></span>
+              <span style="height:45%"></span>
+              <span style="height:40%"></span>
+              <span style="height:60%"></span>
+              <span style="height:55%"></span>
+              <span style="height:75%"></span>
+              <span style="height:70%"></span>
+              <span class="active" style="height:100%"></span>
+            </div>
+          </div>
+          <div class="h-card h-card-2">
+            <div class="card-metric-label">Novos Seguidores</div>
+            <div class="card-metric-big" style="font-size:28px">+1.840</div>
+            <div class="card-metric-sub">em 30 dias</div>
+          </div>
+          <div class="h-card h-card-3">
+            <div class="card-metric-label">ROI Anúncios</div>
+            <div class="card-metric-big" style="font-size:24px">4.2x</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICES ─────────────────────────────────── -->
+<section id="servicos">
+  <div class="container">
+    <div class="services-header">
+      <div>
+        <div class="section-label">O que fazemos</div>
+        <h2 class="section-title">Soluções Completas<br>para sua Marca</h2>
+      </div>
+      <p class="section-sub">Do design à estratégia digital — tudo em um só lugar para sua empresa crescer de forma consistente e profissional.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card anim">
+        <div class="service-icon-wrap">📱</div>
+        <div class="service-name">Gestão de Redes Sociais</div>
+        <div class="service-desc">Estratégia, criação de conteúdo e gerenciamento completo do seu Instagram e Facebook para gerar engajamento real.</div>
+      </div>
+      <div class="service-card anim">
+        <div class="service-icon-wrap">🎨</div>
+        <div class="service-name">Design Gráfico Estratégico</div>
+        <div class="service-desc">Artes profissionais que comunicam o valor da sua marca e se destacam no feed dos seus clientes.</div>
+      </div>
+      <div class="service-card anim">
+        <div class="service-icon-wrap">✏️</div>
+        <div class="service-name">Criação de Logotipo</div>
+        <div class="service-desc">Identidade visual única e memorável que representa a essência do seu negócio com profissionalismo.</div>
+      </div>
+      <div class="service-card anim">
+        <div class="service-icon-wrap">🌐</div>
+        <div class="service-name">Identidade Visual Completa</div>
+        <div class="service-desc">Manual de marca completo: cores, fontes, ícones, padrões e aplicações para todos os materiais da sua empresa.</div>
+      </div>
+      <div class="service-card anim">
+        <div class="service-icon-wrap">💰</div>
+        <div class="service-name">Tráfego Pago e Anúncios</div>
+        <div class="service-desc">Campanhas no Meta Ads e Google Ads com segmentação precisa para atingir quem realmente quer comprar de você.</div>
+      </div>
+      <div class="service-card anim">
+        <div class="service-icon-wrap">🖼️</div>
+        <div class="service-name">Banners e Flyers</div>
+        <div class="service-desc">Materiais digitais e impressos de alta qualidade para divulgação online e presencial do seu negócio.</div>
+      </div>
+      <div class="service-card anim">
+        <div class="service-icon-wrap">📊</div>
+        <div class="service-name">Estratégias de Posicionamento</div>
+        <div class="service-desc">Análise de mercado e concorrência para posicionar sua marca de forma diferenciada e competitiva.</div>
+      </div>
+      <div class="service-card anim">
+        <div class="service-icon-wrap">✍️</div>
+        <div class="service-name">Criação de Conteúdo</div>
+        <div class="service-desc">Copy persuasiva, legendas estratégicas e roteiros de Reels que geram conexão e convertem seguidores em clientes.</div>
+      </div>
+      <div class="service-card anim">
+        <div class="service-icon-wrap">📍</div>
+        <div class="service-name">Divulgação Local</div>
+        <div class="service-desc">Estratégias específicas para negócios locais em Capão da Canoa e região, atingindo seu público-alvo com precisão.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container"><div class="divider"><span>Como Trabalhamos</span></div></div>
+
+<!-- ── PROCESS ──────────────────────────────────── -->
+<section id="processo">
+  <div class="container">
+    <div class="section-label">Metodologia</div>
+    <h2 class="section-title">Do Diagnóstico<br>ao Resultado</h2>
+    <div class="process-steps">
+      <div class="process-step anim">
+        <div class="step-num">01</div>
+        <div class="step-dot"></div>
+        <div class="step-title">Diagnóstico Gratuito</div>
+        <div class="step-desc">Analisamos seu perfil, seus concorrentes e as oportunidades do seu mercado local. Sem compromisso.</div>
+      </div>
+      <div class="process-step anim">
+        <div class="step-num">02</div>
+        <div class="step-dot"></div>
+        <div class="step-title">Estratégia Personalizada</div>
+        <div class="step-desc">Criamos um plano exclusivo para seu negócio com metas claras e ações específicas para sua realidade.</div>
+      </div>
+      <div class="process-step anim">
+        <div class="step-num">03</div>
+        <div class="step-dot"></div>
+        <div class="step-title">Execução Profissional</div>
+        <div class="step-desc">Produzimos e publicamos seu conteúdo com consistência, qualidade visual e copy estratégica.</div>
+      </div>
+      <div class="process-step anim">
+        <div class="step-num">04</div>
+        <div class="step-dot"></div>
+        <div class="step-title">Relatório & Crescimento</div>
+        <div class="step-desc">Acompanhamento quinzenal com dados reais, ajustes de rota e foco em resultados que impactam seu faturamento.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RESULTS ──────────────────────────────────── -->
+<section id="resultados">
+  <div class="container">
+    <div class="section-label">Números que falam</div>
+    <h2 class="section-title">Resultados Reais<br>para Negócios Reais</h2>
+    <div class="results-grid">
+      <div class="result-item anim">
+        <div class="result-num" data-target="50" data-suffix="+">0+</div>
+        <div class="result-label">Clientes Atendidos</div>
+      </div>
+      <div class="result-item anim">
+        <div class="result-num" data-target="247" data-suffix="%">0%</div>
+        <div class="result-label">Crescimento Médio de Alcance</div>
+      </div>
+      <div class="result-item anim">
+        <div class="result-num" data-target="4" data-suffix=".2x">0x</div>
+        <div class="result-label">ROI Médio em Anúncios</div>
+      </div>
+      <div class="result-item anim">
+        <div class="result-num" data-target="98" data-suffix="%">0%</div>
+        <div class="result-label">Clientes Satisfeitos</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ──────────────────────────────────── -->
+<section id="precos">
+  <div class="container">
+    <div class="section-label">Investimento</div>
+    <h2 class="section-title">Planos para Cada<br>Fase do seu Negócio</h2>
+    <p class="section-sub">Transparência total. Sem letras miúdas. Escolha o plano ideal e comece a crescer.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card anim">
+        <div class="pricing-badge">Para começar</div>
+        <div class="pricing-name">Starter Pack</div>
+        <div class="pricing-sub">Ideal para quem está dando os primeiros passos</div>
+        <ul class="pricing-list">
+          <li>Diagnóstico gratuito do perfil</li>
+          <li>1 mês de gestão de redes sociais</li>
+          <li>12 artes personalizadas por mês</li>
+          <li>Bio profissional otimizada</li>
+          <li>Relatório de desempenho mensal</li>
+          <li>Suporte via WhatsApp</li>
+        </ul>
+        <a href="https://wa.me/5551993463615?text=Olá!%20Tenho%20interesse%20no%20plano%20Starter%20Pack%20da%20APEX!" class="btn btn-outline pricing-cta" target="_blank" rel="noopener noreferrer">Quero este plano</a>
+      </div>
+      <div class="pricing-card featured anim">
+        <div class="pricing-badge">⭐ Mais Popular</div>
+        <div class="pricing-name">Presença Total</div>
+        <div class="pricing-sub">O pacote mais completo e mais vendido</div>
+        <ul class="pricing-list">
+          <li>Gestão completa de redes sociais</li>
+          <li>Identidade visual completa</li>
+          <li>Logotipo profissional</li>
+          <li>20 artes personalizadas por mês</li>
+          <li>Stories semanais estratégicos</li>
+          <li>Relatório quinzenal detalhado</li>
+          <li>Campanhas de divulgação local</li>
+          <li>Suporte prioritário</li>
+        </ul>
+        <a href="https://wa.me/5551993463615?text=Olá!%20Tenho%20interesse%20no%20plano%20Presença%20Total%20da%20APEX!" class="btn btn-primary pricing-cta" target="_blank" rel="noopener noreferrer">Começar Agora</a>
+      </div>
+      <div class="pricing-card anim">
+        <div class="pricing-badge">Experimente grátis</div>
+        <div class="pricing-name">Isca Digital</div>
+        <div class="pricing-sub">Para conhecer nosso trabalho sem risco</div>
+        <ul class="pricing-list">
+          <li>Análise gratuita do seu perfil</li>
+          <li>Auditoria completa de redes sociais</li>
+          <li>1 arte profissional de degustação</li>
+          <li>Diagnóstico da concorrência local</li>
+          <li>Proposta customizada sem compromisso</li>
+        </ul>
+        <a href="https://wa.me/5551993463615?text=Olá!%20Gostaria%20de%20uma%20análise%20gratuita%20do%20meu%20perfil!" class="btn btn-outline pricing-cta" target="_blank" rel="noopener noreferrer">Quero Análise Grátis</a>
+      </div>
+    </div>
+    <p style="text-align:center;font-size:13px;color:var(--mid-gray);margin-top:2rem;">
+      Precisa de algo personalizado? <a href="https://wa.me/5551993463615?text=Olá!%20Preciso%20de%20um%20plano%20personalizado." style="color:var(--gold);" target="_blank" rel="noopener noreferrer">Fale conosco →</a>
+    </p>
+  </div>
+</section>
+
+<div class="container"><div class="divider"><span>O que dizem nossos clientes</span></div></div>
+
+<!-- ── TESTIMONIALS ─────────────────────────────── -->
+<section id="depoimentos">
+  <div class="container">
+    <div class="section-label">Depoimentos</div>
+    <h2 class="section-title">Clientes que Cresceram<br>com a APEX</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial anim">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-text">Em apenas 2 meses com a APEX, meu restaurante triplicou o alcance no Instagram. As artes ficaram incríveis e os clientes começaram a citar as redes sociais na hora de fazer reserva!</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div>
+            <div class="author-name">Marcos R.</div>
+            <div class="author-role">Restaurante · Capão da Canoa</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial anim">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-text">Profissionalismo total. A identidade visual que fizeram pra minha clínica ficou exatamente como eu imaginava — e os anúncios trouxeram pacientes novos logo na primeira semana.</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">AK</div>
+          <div>
+            <div class="author-name">Ana K.</div>
+            <div class="author-role">Clínica Estética · RS</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial anim">
+        <div class="stars">★★★★★</div>
+        <div class="testimonial-quote">"</div>
+        <div class="testimonial-text">Contratei achando que ia ser mais do mesmo, mas a APEX surpreendeu. Eles estudaram meu mercado, entenderam meu cliente e fizeram uma estratégia que realmente funciona.</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">LP</div>
+          <div>
+            <div class="author-name">Lucas P.</div>
+            <div class="author-role">Loja de Roupas · Capão da Canoa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ──────────────────────────────────── -->
+<section id="contato">
+  <div class="container">
+    <div class="contact-wrapper">
+      <div>
+        <div class="section-label">Fale conosco</div>
+        <h2 class="contact-info-title">Vamos Crescer<br>Juntos?</h2>
+        <p class="contact-info-desc">
+          Atendemos negócios em Capão da Canoa e toda a região litorânea do RS. Entre em contato agora e receba uma análise gratuita do seu perfil digital.
+        </p>
+        <div class="contact-channels">
+          <a href="https://wa.me/5551993463615?text=Olá!%20Vim%20pelo%20site%20da%20APEX%20e%20gostaria%20de%20falar%20com%20vocês!" class="contact-channel" target="_blank" rel="noopener noreferrer">
+            <div class="ch-icon">💬</div>
+            <div>
+              <div class="ch-label">WhatsApp</div>
+              <div class="ch-value">(51) 99346-3615</div>
+            </div>
+          </a>
+          <a href="mailto:apexmarketingdigital26@gmail.com" class="contact-channel">
+            <div class="ch-icon">✉️</div>
+            <div>
+              <div class="ch-label">E-mail</div>
+              <div class="ch-value">apexmarketingdigital26@gmail.com</div>
+            </div>
+          </a>
+          <a href="https://instagram.com/Apex.marketingdigital" class="contact-channel" target="_blank" rel="noopener noreferrer">
+            <div class="ch-icon">📸</div>
+            <div>
+              <div class="ch-label">Instagram</div>
+              <div class="ch-value">@Apex.marketingdigital</div>
+            </div>
+          </a>
+          <div class="contact-channel" style="cursor:default;">
+            <div class="ch-icon">📍</div>
+            <div>
+              <div class="ch-label">Localização</div>
+              <div class="ch-value">Capão da Canoa, Rio Grande do Sul</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div id="contact-form" class="contact-form" novalidate>
+          <!-- Honeypot anti-spam -->
+          <div class="honeypot" aria-hidden="true">
+            <input type="text" id="hp-name" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Seu Nome *</label>
+              <input type="text" id="f-name" placeholder="João Silva" maxlength="80" autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="f-phone">WhatsApp *</label>
+              <input type="tel" id="f-phone" placeholder="(51) 99999-9999" maxlength="20" autocomplete="tel">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-email">E-mail *</label>
+            <input type="email" id="f-email" placeholder="voce@email.com" maxlength="150" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="f-business">Tipo de Negócio</label>
+            <select id="f-business">
+              <option value="">Selecione...</option>
+              <option>Restaurante / Alimentação</option>
+              <option>Clínica / Saúde / Estética</option>
+              <option>Loja / Comércio</option>
+              <option>Prestador de Serviços</option>
+              <option>Moda / Vestuário</option>
+              <option>Outro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-message">Mensagem</label>
+            <textarea id="f-message" placeholder="Conte um pouco sobre seu negócio e o que você precisa..." maxlength="1000"></textarea>
+          </div>
+          <div id="form-feedback" class="form-feedback" role="alert" aria-live="polite"></div>
+          <button type="button" class="btn btn-primary form-submit" onclick="submitForm()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Enviar Mensagem
+          </button>
+          <p style="font-size:11px;color:var(--mid-gray);text-align:center;margin-top:0.5rem;">
+            Resposta garantida em até 24h ·
+            <a href="https://wa.me/5551993463615" style="color:var(--gold);" target="_blank" rel="noopener noreferrer">ou fale já pelo WhatsApp</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ───────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">APEX</div>
+        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-dark);margin-bottom:0.75rem">Marketing Digital</div>
+        <p class="footer-desc">Transformamos negócios locais em referências digitais. Design, estratégia e resultados reais em Capão da Canoa, RS.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Links</div>
+        <div class="footer-links">
+          <a href="#servicos">Serviços</a>
+          <a href="#processo">Como Funciona</a>
+          <a href="#precos">Planos</a>
+          <a href="#depoimentos">Depoimentos</a>
+          <a href="#contato">Contato</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contato</div>
+        <div class="footer-links">
+          <a href="https://wa.me/5551993463615" target="_blank" rel="noopener noreferrer">(51) 99346-3615</a>
+          <a href="mailto:apexmarketingdigital26@gmail.com">apexmarketingdigital26@gmail.com</a>
+          <a href="https://instagram.com/Apex.marketingdigital" target="_blank" rel="noopener noreferrer">@Apex.marketingdigital</a>
+          <span style="color:var(--mid-gray);font-size:13px;">Capão da Canoa · RS</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 APEX Marketing Digital · Capão da Canoa, RS · Todos os direitos reservados.</div>
+      <div class="social-links">
+        <a href="https://instagram.com/Apex.marketingdigital" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://wa.me/5551993463615" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="mailto:apexmarketingdigital26@gmail.com" class="social-link" aria-label="Email">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── FLOATING WA ──────────────────────────────── -->
+<a id="float-wa" href="https://wa.me/5551993463615?text=Olá!%20Vim%20pelo%20site%20da%20APEX%20e%20quero%20uma%20análise%20gratuita!" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span>Falar Agora</span>
+</a>
+
+<script>
+/* ── SECURITY: Input sanitizer ─────────────────── */
+function escapeHTML(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;')
+    .replace(/\//g, '&#x2F;');
+}
+
+/* ── HAMBURGER NAV ─────────────────────────────── */
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobile-nav');
+let navOpen = false;
+
+hamburger.addEventListener('click', () => {
+  navOpen = !navOpen;
+  mobileNav.classList.toggle('open', navOpen);
+  hamburger.setAttribute('aria-expanded', navOpen);
+  document.body.style.overflow = navOpen ? 'hidden' : '';
+});
+
+function closeMobileNav() {
+  navOpen = false;
+  mobileNav.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+
+/* ── SCROLL ANIMATIONS ─────────────────────────── */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.anim').forEach(el => observer.observe(el));
+
+/* ── COUNTER ANIMATION ─────────────────────────── */
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target, 10);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  const start = performance.now();
+
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const ease = 1 - Math.pow(1 - progress, 3);
+    const value = Math.floor(ease * target);
+    el.textContent = value + suffix;
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !e.target.dataset.animated) {
+      e.target.dataset.animated = '1';
+      animateCounter(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+
+/* ── FORM VALIDATION & SUBMISSION ──────────────── */
+const RATE_LIMIT_KEY = 'apex_last_submit';
+const RATE_LIMIT_MS = 60000; // 1 min
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+}
+function validatePhone(phone) {
+  return phone.replace(/\D/g,'').length >= 10;
+}
+function stripTags(str) {
+  return str.replace(/<[^>]*>/g, '');
+}
+
+function showFeedback(msg, type) {
+  const fb = document.getElementById('form-feedback');
+  fb.textContent = msg;
+  fb.className = 'form-feedback ' + type;
+  fb.style.display = 'block';
+  fb.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function submitForm() {
+  // Honeypot check
+  const hp = document.getElementById('hp-name');
+  if (hp && hp.value.trim() !== '') return;
+
+  // Rate limiting
+  const lastSubmit = sessionStorage.getItem(RATE_LIMIT_KEY);
+  if (lastSubmit && Date.now() - parseInt(lastSubmit) < RATE_LIMIT_MS) {
+    showFeedback('⏳ Aguarde um momento antes de enviar novamente.', 'error');
+    return;
+  }
+
+  // Field values — sanitized
+  const name     = escapeHTML(stripTags(document.getElementById('f-name').value.trim()));
+  const phone    = escapeHTML(stripTags(document.getElementById('f-phone').value.trim()));
+  const email    = escapeHTML(stripTags(document.getElementById('f-email').value.trim()));
+  const business = escapeHTML(stripTags(document.getElementById('f-business').value.trim()));
+  const message  = escapeHTML(stripTags(document.getElementById('f-message').value.trim()));
+
+  // Validation
+  if (!name || name.length < 2) {
+    showFeedback('Por favor, informe seu nome.', 'error');
+    document.getElementById('f-name').focus();
+    return;
+  }
+  if (!phone || !validatePhone(phone)) {
+    showFeedback('Informe um WhatsApp válido com DDD.', 'error');
+    document.getElementById('f-phone').focus();
+    return;
+  }
+  if (!email || !validateEmail(email)) {
+    showFeedback('Informe um e-mail válido.', 'error');
+    document.getElementById('f-email').focus();
+    return;
+  }
+
+  // Rate limit mark
+  sessionStorage.setItem(RATE_LIMIT_KEY, Date.now().toString());
+
+  // Build WhatsApp message
+  const waText = encodeURIComponent(
+    `Olá! Vim pelo site da APEX.\n\n` +
+    `*Nome:* ${name}\n` +
+    `*WhatsApp:* ${phone}\n` +
+    `*E-mail:* ${email}\n` +
+    (business ? `*Negócio:* ${business}\n` : '') +
+    (message  ? `*Mensagem:* ${message}`   : '')
+  );
+
+  showFeedback('✅ Mensagem enviada! Redirecionando para o WhatsApp...', 'success');
+
+  // Redirect after brief delay
+  setTimeout(() => {
+    window.open(`https://wa.me/5551993463615?text=${waText}`, '_blank', 'noopener,noreferrer');
+  }, 800);
+}
+
+/* ── PHONE MASK ────────────────────────────────── */
+document.getElementById('f-phone').addEventListener('input', function() {
+  let v = this.value.replace(/\D/g, '').slice(0, 11);
+  if (v.length > 6) {
+    v = `(${v.slice(0,2)}) ${v.slice(2,7)}-${v.slice(7)}`;
+  } else if (v.length > 2) {
+    v = `(${v.slice(0,2)}) ${v.slice(2)}`;
+  }
+  this.value = v;
+});
+
+/* ── NAVBAR SCROLL EFFECT ──────────────────────── */
+window.addEventListener('scroll', () => {
+  const nb = document.getElementById('navbar');
+  if (window.scrollY > 40) {
+    nb.style.borderBottomColor = 'rgba(201,168,76,0.15)';
+  } else {
+    nb.style.borderBottomColor = 'rgba(201,168,76,0.1)';
+  }
+}, { passive: true });
+</script>
+</body>
+</html>
