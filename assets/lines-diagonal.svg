@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <defs>
+    <style>
+      .apex-title { font-family: 'Inter Display','Inter','Satoshi','General Sans','Arial',sans-serif; font-weight: 750; letter-spacing: 9px; }
+      .apex-sub { font-family: 'Inter Display','Inter','Satoshi','General Sans','Arial',sans-serif; font-weight: 500; letter-spacing: 4px; }
+      .apex-ui { font-family: 'Inter Display','Inter','Satoshi','General Sans','Arial',sans-serif; font-weight: 500; }
+    </style>
+  </defs>
+  
+  <line x1="-240" y1="500" x2="140" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="-160" y1="500" x2="220" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="-80" y1="500" x2="300" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="0" y1="500" x2="380" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="80" y1="500" x2="460" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="160" y1="500" x2="540" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="240" y1="500" x2="620" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="320" y1="500" x2="700" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="400" y1="500" x2="780" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="480" y1="500" x2="860" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="560" y1="500" x2="940" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="640" y1="500" x2="1020" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="720" y1="500" x2="1100" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="800" y1="500" x2="1180" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+<line x1="880" y1="500" x2="1260" y2="0" stroke="#D4AF37" stroke-width="3" opacity="0.75"/>
+</svg>

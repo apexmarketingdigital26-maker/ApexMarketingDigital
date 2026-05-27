@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 108 108">
+  <defs>
+    <style>
+      .apex-title { font-family: 'Inter Display','Inter','Satoshi','General Sans','Arial',sans-serif; font-weight: 750; letter-spacing: 9px; }
+      .apex-sub { font-family: 'Inter Display','Inter','Satoshi','General Sans','Arial',sans-serif; font-weight: 500; letter-spacing: 4px; }
+      .apex-ui { font-family: 'Inter Display','Inter','Satoshi','General Sans','Arial',sans-serif; font-weight: 500; }
+    </style>
+  </defs>
+  
+  <path d="M22 78 L42 58 L57 68 L84 28" fill="none" stroke="#D4AF37" stroke-width="8" stroke-linejoin="miter"/><path d="M62 28 H84 V50" fill="none" stroke="#D4AF37" stroke-width="8"/>
+</svg>
