@@ -1191,3 +1191,59 @@ textarea:focus {
     transform: none;
   }
 }
+/* Ajustes finos da primeira dobra */
+
+.hero {
+  min-height: calc(100vh - 88px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(3.4rem, 6.4vw, 6.4rem) !important;
+  line-height: 0.92 !important;
+  letter-spacing: -0.075em !important;
+  max-width: 760px;
+}
+
+.hero-subtitle {
+  max-width: 680px;
+}
+
+.hero-card {
+  min-height: 560px !important;
+  overflow: hidden;
+}
+
+.hero-card h2 {
+  font-size: clamp(2rem, 2.8vw, 2.8rem) !important;
+  line-height: 1.05 !important;
+  max-width: 420px;
+}
+
+.hero-card-grid {
+  margin-top: 2rem !important;
+}
+
+@media (max-width: 980px) {
+  .hero {
+    min-height: auto;
+    padding-top: 72px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.2rem, 13vw, 5.2rem) !important;
+    max-width: 100%;
+  }
+
+  .hero-card {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-title {
+    font-size: clamp(2.8rem, 14vw, 4.2rem) !important;
+    line-height: 0.95 !important;
+  }
+}
